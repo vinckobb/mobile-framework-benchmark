@@ -1,8 +1,8 @@
-import {Step} from "../components/step";
+import {Step} from "../../components/step";
 
-import styles from "../page.module.css";
+import styles from "../../page.module.css";
 
-import stepAnimation from "../lottie-files/step-1.json";
+import stepAnimation from "../../lottie-files/step-4.json";
 import Link from "next/link";
 
 export default function Stepper() {
@@ -10,21 +10,21 @@ export default function Stepper() {
     <div className={styles.page}>
       <main className={styles.main}>
         <Step animationData={stepAnimation}>
-          <i>Simple</i> and <b>easy-to-follow</b> steps
+          You are all set up to use our app. <b>Enjoy</b>! 🎉
         </Step>
       </main>
       <footer className={styles.footer}>
-        <Link href='/'>
-          <button>Home</button>
+        <Link href='/stepper/step3'>
+          <button>Previous</button>
         </Link>
         <div className="flex-row">
+          <div className={styles.step}></div>
+          <div className={styles.step}></div>
+          <div className={styles.step}></div>
           <div className={`${styles.step} ${styles.active}`}></div>
-          <div className={styles.step}></div>
-          <div className={styles.step}></div>
-          <div className={styles.step}></div>
         </div>
-        <Link href='/stepper/step2'>
-          <button>Next</button>
+        <Link href='/'>
+          <button>Finish</button>
         </Link>
       </footer>
     </div>
